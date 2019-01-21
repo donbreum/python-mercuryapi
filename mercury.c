@@ -1336,6 +1336,8 @@ static PyMethodDef TagReadData_methods[] = {
 };
 
 static PyMemberDef TagReadData_members[] = {
+    {"phase", T_UBYTE, offsetof(TagReadData, data.phase), READONLY,
+     "Phase."},
     {"antenna", T_UBYTE, offsetof(TagReadData, data.antenna), READONLY,
      "Antenna where the tag was read."},
     {"read_count", T_UINT, offsetof(TagReadData, data.readCount), READONLY,
